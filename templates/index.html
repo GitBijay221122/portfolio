@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | AI/ML Student</title>
+    <title>Bijay Sharma | AI/ML Student</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary-color: #7c3aed;
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary-color: #8b5cf6;
             --dark-bg: #0f172a;
-            --light-bg: #f8fafc;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --border-color: #e2e8f0;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --darker-bg: #0a0f1f;
+            --card-bg: #1e293b;
+            --light-bg: #1e293b;
+            --text-dark: #f8fafc;
+            --text-light: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
             --transition: all 0.3s ease;
             --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
@@ -36,7 +39,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background-color: var(--light-bg);
+            background-color: var(--dark-bg);
             overflow-x: hidden;
         }
 
@@ -53,11 +56,12 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             box-shadow: var(--shadow);
             z-index: 1000;
             transition: var(--transition);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .navbar {
@@ -85,7 +89,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-light);
             font-weight: 500;
             font-size: 1rem;
             transition: var(--transition);
@@ -123,7 +127,7 @@
         /* Hero Section */
         .hero {
             padding: 160px 0 100px;
-            background: var(--light-bg);
+            background: linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
             position: relative;
             overflow: hidden;
         }
@@ -137,7 +141,7 @@
             height: 400px;
             border-radius: 50%;
             background: var(--gradient);
-            opacity: 0.05;
+            opacity: 0.08;
             z-index: 0;
         }
 
@@ -170,7 +174,7 @@
 
         .hero-text p {
             font-size: 1.1rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 2rem;
         }
 
@@ -214,8 +218,8 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: rgba(37, 99, 235, 0.05);
-            border: 2px solid rgba(37, 99, 235, 0.2);
+            background: rgba(59, 130, 246, 0.05);
+            border: 2px solid rgba(59, 130, 246, 0.3);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -240,6 +244,11 @@
         /* Sections Common Styles */
         .section {
             padding: 100px 0;
+            background-color: var(--dark-bg);
+        }
+
+        .section-alt {
+            background-color: var(--darker-bg);
         }
 
         .section-title {
@@ -269,7 +278,7 @@
         }
 
         .section-title p {
-            color: var(--text-light);
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -282,22 +291,24 @@
         }
 
         .skill-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 2rem;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--border-color);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
         }
 
         .skill-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: var(--primary-dark);
+            color: var(--primary-color);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -314,13 +325,14 @@
         }
 
         .skill-tag {
-            background: rgba(37, 99, 235, 0.1);
+            background: rgba(59, 130, 246, 0.15);
             color: var(--primary-color);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 500;
             transition: var(--transition);
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .skill-tag:hover {
@@ -359,17 +371,18 @@
             top: 5px;
             width: 20px;
             height: 20px;
-            background: white;
+            background: var(--dark-bg);
             border: 4px solid var(--primary-color);
             border-radius: 50%;
             z-index: 1;
         }
 
         .timeline-content {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
         }
 
         .timeline-date {
@@ -397,7 +410,7 @@
         }
 
         .timeline-content p {
-            color: var(--text-light);
+            color: var(--text-muted);
         }
 
         /* Projects Grid */
@@ -408,21 +421,23 @@
         }
 
         .project-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--border-color);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
         }
 
         .project-header {
             padding: 1.5rem;
-            background: rgba(37, 99, 235, 0.05);
+            background: rgba(59, 130, 246, 0.08);
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -433,7 +448,7 @@
         }
 
         .project-date {
-            color: var(--text-light);
+            color: var(--text-muted);
             font-size: 0.9rem;
             font-weight: 500;
         }
@@ -450,12 +465,13 @@
         }
 
         .tech-tag {
-            background: rgba(124, 58, 237, 0.1);
+            background: rgba(139, 92, 246, 0.15);
             color: var(--secondary-color);
             padding: 0.3rem 0.8rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 500;
+            border: 1px solid rgba(139, 92, 246, 0.3);
         }
 
         .project-stats {
@@ -469,7 +485,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
@@ -485,7 +501,7 @@
         }
 
         .award-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: var(--shadow);
@@ -493,11 +509,13 @@
             align-items: flex-start;
             gap: 1rem;
             transition: var(--transition);
+            border: 1px solid var(--border-color);
         }
 
         .award-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
         }
 
         .award-icon {
@@ -520,15 +538,16 @@
         }
 
         .award-content p {
-            color: var(--text-light);
+            color: var(--text-muted);
             font-size: 0.95rem;
         }
 
         /* Footer */
         footer {
-            background: var(--dark-bg);
+            background: var(--darker-bg);
             color: white;
             padding: 3rem 0 2rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .footer-content {
@@ -565,6 +584,7 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            color: var(--text-light);
         }
 
         .social-links {
@@ -595,7 +615,7 @@
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
@@ -637,13 +657,14 @@
                 top: 70px;
                 right: -100%;
                 flex-direction: column;
-                background: white;
+                background: var(--card-bg);
                 width: 250px;
                 height: calc(100vh - 70px);
                 padding: 2rem;
                 box-shadow: var(--shadow-lg);
                 transition: var(--transition);
                 z-index: 999;
+                border-left: 1px solid var(--border-color);
             }
 
             .nav-links.active {
@@ -734,7 +755,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Portfolio</a>
+                <a href="#" class="logo">Bijay Sharma</a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -776,7 +797,7 @@
     </section>
 
     <!-- Education Section -->
-    <section class="section" id="education">
+    <section class="section section-alt" id="education">
         <div class="container">
             <div class="section-title">
                 <h2>Education</h2>
@@ -870,7 +891,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="section" id="experience">
+    <section class="section section-alt" id="experience">
         <div class="container">
             <div class="section-title">
                 <h2>Experience</h2>
@@ -973,7 +994,7 @@
     </section>
 
     <!-- Leadership & Awards Section -->
-    <section class="section" id="awards">
+    <section class="section section-alt" id="awards">
         <div class="container">
             <div class="section-title">
                 <h2>Leadership & Awards</h2>
@@ -1020,38 +1041,38 @@
                     <ul class="contact-info">
                         <li><i class="fas fa-user-graduate"></i> 3rd Year B.Tech in AI</li>
                         <li><i class="fas fa-university"></i> Invertis University, Bareilly, UP</li>
-                        <li><i class="fas fa-envelope"></i> student@portfolio.dev</li>
+                        <li><i class="fas fa-envelope"></i> bijaysharma0807@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +91 98765 43210</li>
                     </ul>
                     <div class="social-links">
-    <a href="https://www.linkedin.com/in/bijay-sharma-205b322a2/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://github.com/GitBijay221122" class="social-link"><i class="fab fa-github"></i></a>
-    <a href="https://leetcode.com/u/BijaySharma098/" class="social-link"><i class="fas fa-code"></i></a>
-    <a href="mailto:bijaysharma0807@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-</div>
+                        <a href="https://www.linkedin.com/in/bijay-sharma-205b322a2/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/GitBijay221122" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://leetcode.com/u/BijaySharma098/" class="social-link"><i class="fas fa-code"></i></a>
+                        <a href="mailto:bijaysharma0807@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="contact-info">
-                        <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
-                        <li><a href="#education" style="color: white; text-decoration: none;">Education</a></li>
-                        <li><a href="#skills" style="color: white; text-decoration: none;">Skills</a></li>
-                        <li><a href="#projects" style="color: white; text-decoration: none;">Projects</a></li>
-                        <li><a href="#awards" style="color: white; text-decoration: none;">Awards</a></li>
+                        <li><a href="#home" style="color: var(--text-light); text-decoration: none;">Home</a></li>
+                        <li><a href="#education" style="color: var(--text-light); text-decoration: none;">Education</a></li>
+                        <li><a href="#skills" style="color: var(--text-light); text-decoration: none;">Skills</a></li>
+                        <li><a href="#projects" style="color: var(--text-light); text-decoration: none;">Projects</a></li>
+                        <li><a href="#awards" style="color: var(--text-light); text-decoration: none;">Awards</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Technical Focus</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">Specializing in Artificial Intelligence, Machine Learning, Data Science, and building intelligent systems with Python and modern frameworks.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Specializing in Artificial Intelligence, Machine Learning, Data Science, and building intelligent systems with Python and modern frameworks.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag" style="background: rgba(255, 255, 255, 0.2); color: white;">AI/ML</span>
-                        <span class="skill-tag" style="background: rgba(255, 255, 255, 0.2); color: white;">Data Science</span>
-                        <span class="skill-tag" style="background: rgba(255, 255, 255, 0.2); color: white;">Python</span>
+                        <span class="skill-tag" style="background: rgba(59, 130, 246, 0.2); color: var(--primary-color);">AI/ML</span>
+                        <span class="skill-tag" style="background: rgba(59, 130, 246, 0.2); color: var(--primary-color);">Data Science</span>
+                        <span class="skill-tag" style="background: rgba(59, 130, 246, 0.2); color: var(--primary-color);">Python</span>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Portfolio. All rights reserved. | Designed with HTML, CSS & JavaScript</p>
+                <p>&copy; 2025 Bijay Sharma. All rights reserved. | Designed with HTML, CSS & JavaScript</p>
             </div>
         </div>
     </footer>
@@ -1080,7 +1101,7 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.4)';
             } else {
                 header.style.boxShadow = 'var(--shadow)';
             }
